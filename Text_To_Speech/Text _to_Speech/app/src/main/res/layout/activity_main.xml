@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:padding="4dp"
+    android:background="#FFE4C4"
+    tools:context="com.example.rahulsingh.text_to_speech.MainActivity">
+
+     <android.support.v7.widget.Toolbar
+         android:id="@+id/bar"
+         android:layout_width="match_parent"
+         android:layout_height="?attr/actionBarSize"
+         android:background="@drawable/upper">
+     </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:background="@drawable/upper"
+        android:gravity="center_horizontal">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/rahul"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#DAA520"
+            app:civ_shadow="true"
+            app:civ_shadow_color="#E9967A"
+            app:civ_shadow_radius="6"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:background="@drawable/middle"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <EditText
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/et"
+                    android:textColorHint="#000000"
+                    android:textSize="20sp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:background="@drawable/upper"
+        android:orientation="horizontal"
+        android:padding="30dp">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
+            android:text="@string/st"
+            android:drawableLeft="@drawable/ic_speak"
+            android:textStyle="bold"
+            android:textSize="19sp"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
+            android:text="@string/sp"
+            android:drawableRight="@drawable/ic_stop"
+            android:textSize="19sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>
